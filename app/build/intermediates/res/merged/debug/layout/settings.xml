@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/scrollView1" android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+
+	<LinearLayout
+	    android:id="@+id/linearLayout1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:focusable="true"
+	    android:focusableInTouchMode="true"
+	    android:orientation="vertical" >
+
+	    <TextView
+	        android:id="@+id/TextView04"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@color/settings_title_background"
+	        android:paddingBottom="1dp"
+	        android:paddingLeft="5dp"
+	        android:paddingTop="1dp"
+	        android:text="@string/settings_title_general"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_title_fontsize" >
+	    </TextView>
+
+	    <LinearLayout
+	        android:id="@+id/linearLayout2"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"
+	        android:layout_marginTop="10dp"
+	        android:orientation="horizontal" >
+
+	        <Button
+	            android:id="@+id/buttonRateApp"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:maxLines="1"
+	            android:text="@string/settings_rate" >
+	        </Button>
+
+	        <Button
+	            android:id="@+id/buttonBuyFull"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:maxLines="1"
+	            android:text="@string/settings_buyfull"
+	            android:visibility="gone" >
+	        </Button>
+
+	        <Button
+	            android:id="@+id/buttonFeedBack"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:maxLines="1"
+	            android:text="@string/settings_feedback" >
+	        </Button>
+	    </LinearLayout>
+
+	    <TextView
+	        android:id="@+id/TextView08"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:background="@color/settings_title_background"
+	        android:paddingBottom="1dp"
+	        android:paddingLeft="5dp"
+	        android:paddingTop="1dp"
+	        android:text="@string/settings_title_view"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_title_fontsize" >
+	    </TextView>
+
+	    <CheckBox
+	        android:id="@+id/checkBoxHideStatusBar"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="20dp"
+	        android:layout_marginTop="3dp"
+	        android:text="@string/settings_hideStatusBar"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" >
+	    </CheckBox>
+
+	    <CheckBox
+	        android:id="@+id/checkBoxHideTitleBar"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="20dp"
+	        android:text="@string/settings_hideTitleBar"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" >
+	    </CheckBox>
+
+	    <CheckBox
+	        android:id="@+id/CheckBoxShowPlusIcon"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="20dp"
+	        android:text="@string/settings_showPlusIcon"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" >
+	    </CheckBox>
+
+	    <TextView
+	        android:id="@+id/TextView13"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:background="@color/settings_title_background"
+	        android:paddingBottom="1dp"
+	        android:paddingLeft="5dp"
+	        android:paddingTop="1dp"
+	        android:text="@string/settings_title_text"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_title_fontsize" >
+	    </TextView>
+
+	    <CheckBox
+	        android:id="@+id/CheckBoxShowNames"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="20dp"
+	        android:text="@string/settings_showNames"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" >
+	    </CheckBox>
+
+	    <TextView
+	        android:id="@+id/TextView15"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginTop="3dp"
+	        android:text="@string/settings_textSize"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" >
+	    </TextView>
+
+	    <Spinner
+	        android:id="@+id/spinnerTextSize"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="7dp"
+	        android:layout_marginRight="16dp" >
+	    </Spinner>
+
+	    <TextView
+	        android:id="@+id/TextView14"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginTop="3dp"
+	        android:text="@string/settings_textPosition"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" >
+	    </TextView>
+
+	    <Spinner
+	        android:id="@+id/spinnerTextPosition"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="7dp"
+	        android:layout_marginRight="16dp" >
+	    </Spinner>
+
+	    <TextView
+	        android:id="@+id/TextView05"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="12dp"
+	        android:background="@color/settings_title_background"
+	        android:paddingBottom="1dp"
+	        android:paddingLeft="5dp"
+	        android:paddingTop="1dp"
+	        android:text="@string/settings_title_actions"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_title_fontsize" >
+	    </TextView>
+
+	    <CheckBox
+	        android:id="@+id/checkboxAutoClose"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="20dp"
+	        android:layout_marginTop="3dp"
+	        android:text="@string/settings_autoClose"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" >
+	    </CheckBox>
+
+	    <TextView
+	        android:id="@+id/TextView01"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginTop="3dp"
+	        android:text="@string/settings_shortClickBehavoir"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" >
+	    </TextView>
+
+	    <Spinner
+	        android:id="@+id/spinnerShortClickBehaviour"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="7dp"
+	        android:layout_marginRight="16dp" >
+	    </Spinner>
+
+	    <TextView
+	        android:id="@+id/TextView02"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginTop="3dp"
+	        android:text="@string/settings_longClickBehavoir"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" >
+	    </TextView>
+
+	    <Spinner
+	        android:id="@+id/spinnerLongClickBehaviour"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="7dp"
+	        android:layout_marginRight="16dp" >
+	    </Spinner>
+
+	    <TextView
+	        android:id="@+id/TextView06"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:background="@color/settings_title_background"
+	        android:paddingBottom="1dp"
+	        android:paddingLeft="5dp"
+	        android:paddingTop="1dp"
+	        android:text="@string/settings_title_layout"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_title_fontsize" />
+
+	    <TextView
+	        android:id="@+id/TextView03"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginTop="10dp"
+	        android:text="@string/settings_layout"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" />
+
+	    <Spinner
+	        android:id="@+id/spinnerLayoutSize"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="7dp"
+	        android:layout_marginRight="16dp" />
+
+	    <TextView
+	        android:id="@+id/TextView16"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginTop="3dp"
+	        android:text="@string/settings_border"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" />
+
+	    <Spinner
+	        android:id="@+id/spinnerBorder"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="7dp"
+	        android:layout_marginRight="16dp" />
+
+	    <TextView
+	        android:id="@+id/TextView17"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginTop="3dp"
+	        android:text="@string/settings_cornerradius"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" />
+
+	    <Spinner
+	        android:id="@+id/spinnerCornerRadius"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="7dp"
+	        android:layout_marginRight="16dp" />
+
+	    <TextView
+	        android:id="@+id/TextView18"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginTop="3dp"
+	        android:text="@string/settings_defaultimage"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" />
+
+	    <Spinner
+	        android:id="@+id/spinnerDefaultImage"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="7dp"
+	        android:layout_marginRight="16dp" />
+
+	    <TextView
+	        android:id="@+id/TextViewActionbar"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="12dp"
+	        android:background="@color/settings_title_background"
+	        android:paddingBottom="1dp"
+	        android:paddingLeft="5dp"
+	        android:paddingTop="1dp"
+	        android:text="@string/settings_title_actionbar"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_title_fontsize"
+	        android:visibility="gone" />
+
+	    <CheckBox
+	        android:id="@+id/CheckBox_settings_actionbar_vc"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="20dp"
+	        android:layout_marginTop="3dp"
+	        android:text="@string/settings_actionbar_vc"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize"
+	        android:visibility="gone" />
+
+	    <CheckBox
+	        android:id="@+id/CheckBox_settings_actionbar_log"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="20dp"
+	        android:layout_marginTop="3dp"
+	        android:text="@string/settings_actionbar_log"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize"
+	        android:visibility="gone" />
+
+	    <CheckBox
+	        android:id="@+id/CheckBox_settings_actionbar_con"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="20dp"
+	        android:layout_marginTop="3dp"
+	        android:text="@string/settings_actionbar_con"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize"
+	        android:visibility="gone" />
+
+	    <CheckBox
+	        android:id="@+id/CheckBox_settings_actionbar_dial"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="20dp"
+	        android:layout_marginTop="3dp"
+	        android:text="@string/settings_actionbar_dial"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize"
+	        android:visibility="gone" />
+
+	    <CheckBox
+	        android:id="@+id/CheckBox_settings_actionbar_ac"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="20dp"
+	        android:layout_marginTop="3dp"
+	        android:text="@string/settings_actionbar_ac"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize"
+	        android:visibility="gone" />
+
+	    <CheckBox
+	        android:id="@+id/CheckBox_settings_actionbar_sc"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="20dp"
+	        android:layout_marginTop="3dp"
+	        android:text="@string/settings_actionbar_sc"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize"
+	        android:visibility="gone" />
+
+	    <CheckBox
+	        android:id="@+id/CheckBox_settings_actionbar_set"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="20dp"
+	        android:layout_marginTop="3dp"
+	        android:text="@string/settings_actionbar_set"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize"
+	        android:visibility="gone" />
+
+	    <TextView
+	        android:id="@+id/TextView07"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:background="@color/settings_title_background"
+	        android:paddingBottom="1dp"
+	        android:paddingLeft="5dp"
+	        android:paddingTop="1dp"
+	        android:text="@string/settings_title_group"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_title_fontsize" >
+	    </TextView>
+
+	    <CheckBox
+	        android:id="@+id/CheckBoxShowNavBar"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="20dp"
+	        android:text="@string/settings_showNavBar"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" >
+	    </CheckBox>
+
+	    <CheckBox
+	        android:id="@+id/CheckBoxSaveLastGroupView"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="20dp"
+	        android:text="@string/settings_saveLastGroupView"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" >
+	    </CheckBox>
+
+	    <TextView
+	        android:id="@+id/TextViewButtonsCount1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:paddingTop="2dp"
+	        android:text="ButtonsCount1"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" >
+	    </TextView>
+
+	    <SeekBar
+	        android:id="@+id/SeekBarShowButtons1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="20dp" >
+	    </SeekBar>
+
+	    <TextView
+	        android:id="@+id/TextViewButtonsCount2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:paddingTop="7dp"
+	        android:text="ButtonsCount2"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" >
+	    </TextView>
+
+	    <SeekBar
+	        android:id="@+id/SeekBarShowButtons2"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="20dp" >
+	    </SeekBar>
+
+	    <TextView
+	        android:id="@+id/TextViewButtonsCount3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:paddingTop="7dp"
+	        android:text="ButtonsCount3"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" >
+	    </TextView>
+
+	    <SeekBar
+	        android:id="@+id/SeekBarShowButtons3"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="20dp" >
+	    </SeekBar>
+
+	    <TextView
+	        android:id="@+id/TextViewButtonsCount4"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:paddingTop="7dp"
+	        android:text="ButtonsCount4"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" >
+	    </TextView>
+
+	    <SeekBar
+	        android:id="@+id/SeekBarShowButtons4"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="20dp" >
+	    </SeekBar>
+
+	    <TextView
+	        android:id="@+id/TextView09"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:paddingTop="2dp"
+	        android:text="@string/settings_titleGroup1"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" >
+	    </TextView>
+
+	    <EditText
+	        android:id="@+id/editTextTitleGroup1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="20dp"
+	        android:inputType="textPersonName"
+	        android:maxLength="20"
+	        android:selectAllOnFocus="true" >
+	    </EditText>
+
+	    <TextView
+	        android:id="@+id/TextView10"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:paddingTop="2dp"
+	        android:text="@string/settings_titleGroup2"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" >
+	    </TextView>
+
+	    <EditText
+	        android:id="@+id/editTextTitleGroup2"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="20dp"
+	        android:inputType="textPersonName"
+	        android:maxLength="20"
+	        android:selectAllOnFocus="true" >
+	    </EditText>
+
+	    <TextView
+	        android:id="@+id/TextView11"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:paddingTop="2dp"
+	        android:text="@string/settings_titleGroup3"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" >
+	    </TextView>
+
+	    <EditText
+	        android:id="@+id/editTextTitleGroup3"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="20dp"
+	        android:inputType="textPersonName"
+	        android:maxLength="20"
+	        android:selectAllOnFocus="true" >
+	    </EditText>
+
+	    <TextView
+	        android:id="@+id/TextView12"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:paddingTop="2dp"
+	        android:text="@string/settings_titleGroup4"
+	        android:textColor="@color/settings_font_foreground"
+	        android:textSize="@dimen/settings_item_fontsize" >
+	    </TextView>
+
+	    <EditText
+	        android:id="@+id/editTextTitleGroup4"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="20dp"
+	        android:inputType="textPersonName"
+	        android:maxLength="20"
+	        android:selectAllOnFocus="true" >
+	    </EditText>
+	</LinearLayout>
+
+</ScrollView>

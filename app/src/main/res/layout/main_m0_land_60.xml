@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+    <at.android.speeddiallite.MyViewFlipper android:id="@+id/viewFlipper1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_above="@+id/linearLayout1">
+        <include android:id="@+id/include1" android:layout_height="wrap_content" android:layout_width="fill_parent" layout="@layout/main_m1_land"></include>
+     	<include android:id="@+id/include2" android:layout_height="wrap_content" android:layout_width="fill_parent" layout="@layout/main_m2_land"></include>
+     </at.android.speeddiallite.MyViewFlipper>
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true" android:id="@+id/linearLayout1">
+
+        <ImageView
+            android:id="@+id/imageViewBack"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+</ImageView>
+
+        <ImageView
+            android:id="@+id/imageViewHome"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+</ImageView>
+
+        <ImageView
+            android:id="@+id/imageViewForward"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+</ImageView>
+    </LinearLayout>   
+</RelativeLayout>

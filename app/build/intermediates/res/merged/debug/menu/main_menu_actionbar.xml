@@ -1,0 +1,39 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_settings"
+        android:icon="@drawable/actionbar_settings"
+        android:title="@string/menu_settings">
+    </item>
+    <item
+        android:id="@+id/menu_viewcontact"
+        android:icon="@drawable/actionbar_viewcontact"
+        android:title="@string/menu_viewcontact">
+    </item>
+    <item
+        android:id="@+id/menu_calllog"
+        android:icon="@drawable/actionbar_calllog"
+        android:title="@string/menu_calllog">
+    </item>
+    <item
+        android:id="@+id/menu_contacts"
+        android:icon="@drawable/actionbar_contacts"
+        android:title="@string/menu_contacts">
+    </item>
+    <item
+        android:id="@+id/menu_dialer"
+        android:icon="@drawable/actionbar_dialer2"
+        android:title="@string/menu_dialer">
+    </item>
+    <item
+        android:id="@+id/menu_actions"
+        android:icon="@drawable/actionbar_actions"
+        android:title="@string/menu_actions">
+    </item>
+    <item
+        android:id="@+id/menu_scan"
+        android:icon="@drawable/actionbar_scan"
+        android:title="@string/menu_scan">
+    </item>
+
+</menu>
