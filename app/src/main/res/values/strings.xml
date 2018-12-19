@@ -98,4 +98,8 @@
 	<string name="app_name">Speed Dial Lite</string>
 	<string name="dev_name">SK Mobile Development</string>
 	<string name="dev_email">action.jackson187@gmail.com</string>
+	<string name="permgrantedtapagain">Permission granted. Tap shortcut again to call the contact</string>
+	<string name="permissiondenied">Permission denied</string>
+	<string name="permsavecontact">Permission is needed to save application data to SD card</string>
+	<string name="longpresstostart">Long press the plus icon to add a new contact shortcut</string>
 </resources>

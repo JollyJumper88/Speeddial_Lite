@@ -98,4 +98,8 @@
 	<string name="app_name">Speed Dial Lite</string>
 	<string name="dev_name">SK Mobile Development</string>
 	<string name="dev_email">action.jackson187@gmail.com</string>
+	<string name="permgrantedtapagain">Berechtigung erteilt. Nochmals drücken um anzurufen</string>
+	<string name="permissiondenied">Berechtigung verweigert</string>
+	<string name="permsavecontact">Die Berechtigung is nötig um Anwendungsdaten zu auf die SD Karte zu speichen</string>
+	<string name="longpresstostart">Das plus Symbol lange drücken um einen Kontakt hinzuzufügen</string>
 </resources>
