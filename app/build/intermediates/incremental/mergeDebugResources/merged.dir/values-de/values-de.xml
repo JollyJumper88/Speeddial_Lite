@@ -20,6 +20,7 @@
     <string name="contextmenu_viewContact">Kontakt anzeigen</string>
     <string name="dev_email">action.jackson187@gmail.com</string>
     <string name="dev_name">SK Mobile Development</string>
+    <string name="longpresstostart">Das plus Symbol lange drücken um einen Kontakt hinzuzufügen</string>
     <string name="menu_actions">Aktionen</string>
     <string name="menu_add">Hinzufügen</string>
     <string name="menu_calllog">Anrufliste</string>
@@ -35,6 +36,9 @@
     <string name="menu_undo">Rückgängig machen</string>
     <string name="menu_viewcontact">Kontakt anzeigen</string>
     <string name="menu_viewmessages">Nachrichten</string>
+    <string name="permgrantedtapagain">Berechtigung erteilt. Nochmals drücken um anzurufen</string>
+    <string name="permissiondenied">Berechtigung verweigert</string>
+    <string name="permsavecontact">Die Berechtigung is nötig um Anwendungsdaten zu auf die SD Karte zu speichen</string>
     <string name="settings_actionbar_ac">Aktionen</string>
     <string name="settings_actionbar_callmenu">Anrufmenü</string>
     <string name="settings_actionbar_con">Kontakte</string>
@@ -87,6 +91,7 @@
     <string name="settings_title_layout">Layout Einstellungen</string>
     <string name="settings_title_text">Text settings</string>
     <string name="settings_title_view">Anzeige Einstellungen</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
     <string name="toast_cancelled">Abgebrochen.</string>
     <string name="toast_copyToClip">Nummer in Zwischenablage kopiert.</string>
     <string name="toast_editShortcut">Wähle eine Verknüpfung …</string>
