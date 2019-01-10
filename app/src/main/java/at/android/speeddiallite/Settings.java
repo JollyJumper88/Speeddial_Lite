@@ -212,7 +212,7 @@ public class Settings extends Activity implements
 		if (mIsICSorHigher) {
 			mCheckBoxHideTitleBar.setVisibility(View.GONE);
 			mCheckboxAbVc.setVisibility(View.VISIBLE);
-			mCheckboxAbLog.setVisibility(View.VISIBLE);
+			mCheckboxAbLog.setVisibility(View.GONE);
 			mCheckboxAbCon.setVisibility(View.VISIBLE);
 			mCheckboxAbDial.setVisibility(View.VISIBLE);
 			mCheckboxAbAc.setVisibility(View.VISIBLE);
@@ -263,7 +263,7 @@ public class Settings extends Activity implements
 		mTitleGroup4 = settings.getString("mTitleGroup4", getResources()
 				.getString(R.string.app_name));
 		mActionbarVc = settings.getBoolean("mActionbarVc", false);
-		mActionbarLog = settings.getBoolean("mActionbarLog", false);
+		mActionbarLog = false; //settings.getBoolean("mActionbarLog", false);
 		mActionbarCon = settings.getBoolean("mActionbarCon", false);
 		mActionbarDial = settings.getBoolean("mActionbarDial", false);
 		mActionbarAc = settings.getBoolean("mActionbarAc", false);
@@ -308,7 +308,7 @@ public class Settings extends Activity implements
 		editor.putString("mTitleGroup4", mEditTextTitleGroup4.getText()
 				.toString());
 		editor.putBoolean("mActionbarVc", mCheckboxAbVc.isChecked());
-		editor.putBoolean("mActionbarLog", mCheckboxAbLog.isChecked());
+		editor.putBoolean("mActionbarLog", false);// mCheckboxAbLog.isChecked());
 		editor.putBoolean("mActionbarCon", mCheckboxAbCon.isChecked());
 		editor.putBoolean("mActionbarDial", mCheckboxAbDial.isChecked());
 		editor.putBoolean("mActionbarAc", mCheckboxAbAc.isChecked());
@@ -403,7 +403,7 @@ public class Settings extends Activity implements
 
 		// Action Bar
 		mCheckboxAbVc.setChecked(mActionbarVc);
-		mCheckboxAbLog.setChecked(mActionbarLog);
+		mCheckboxAbLog.setChecked(false);
 		mCheckboxAbCon.setChecked(mActionbarCon);
 		mCheckboxAbDial.setChecked(mActionbarDial);
 		mCheckboxAbAc.setChecked(mActionbarAc);

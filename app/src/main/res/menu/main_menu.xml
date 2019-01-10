@@ -6,11 +6,6 @@
         android:title="@string/menu_contacts">
     </item>
     <item
-        android:id="@+id/menu_calllog"
-        android:icon="@drawable/menu_calllog"
-        android:title="@string/menu_calllog">
-    </item>
-    <item
         android:id="@+id/menu_dialer"
         android:icon="@drawable/menu_dialer"
         android:title="@string/menu_dialer">

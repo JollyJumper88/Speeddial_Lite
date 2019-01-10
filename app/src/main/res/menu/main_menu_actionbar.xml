@@ -11,11 +11,6 @@
         android:title="@string/menu_viewcontact">
     </item>
     <item
-        android:id="@+id/menu_calllog"
-        android:icon="@drawable/actionbar_calllog"
-        android:title="@string/menu_calllog">
-    </item>
-    <item
         android:id="@+id/menu_contacts"
         android:icon="@drawable/actionbar_contacts"
         android:title="@string/menu_contacts">

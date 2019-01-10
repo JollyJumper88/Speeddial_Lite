@@ -1,36 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:orientation="vertical"
-  android:layout_width="fill_parent"
-  android:layout_height="fill_parent">
-    <at.android.speeddiallite.MyViewFlipper android:id="@+id/viewFlipper1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_above="@+id/linearLayout1">
-        <include android:id="@+id/include1" android:layout_height="wrap_content" android:layout_width="fill_parent" layout="@layout/main_l1"></include>
-        <include android:id="@+id/include2" android:layout_height="wrap_content" android:layout_width="fill_parent" layout="@layout/main_l2"></include>
-        <include android:id="@+id/include3" android:layout_height="wrap_content" android:layout_width="fill_parent" layout="@layout/main_l3"></include>
-        <include android:id="@+id/include4" android:layout_height="wrap_content" android:layout_width="fill_parent" layout="@layout/main_l4"></include>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/background_dark"
+    android:orientation="vertical">
+
+    <at.android.speeddiallite.MyViewFlipper
+        android:id="@+id/viewFlipper1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout1"
+        android:layout_alignParentTop="true">
+
+        <include
+            android:id="@+id/include1"
+            layout="@layout/main_l1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"></include>
+
+        <include
+            android:id="@+id/include2"
+            layout="@layout/main_l2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"></include>
+
+        <include
+            android:id="@+id/include3"
+            layout="@layout/main_l3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"></include>
+
+        <include
+            android:id="@+id/include4"
+            layout="@layout/main_l4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"></include>
     </at.android.speeddiallite.MyViewFlipper>
-    <LinearLayout android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true" android:id="@+id/linearLayout1">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true">
 
         <ImageView
             android:id="@+id/imageViewBack"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" >
-</ImageView>
+            android:layout_weight="1"></ImageView>
 
         <ImageView
             android:id="@+id/imageViewHome"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" >
-</ImageView>
+            android:layout_weight="1"></ImageView>
 
         <ImageView
             android:id="@+id/imageViewForward"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" >
-</ImageView>
-    </LinearLayout>   
+            android:layout_weight="1"></ImageView>
+    </LinearLayout>
 </RelativeLayout>

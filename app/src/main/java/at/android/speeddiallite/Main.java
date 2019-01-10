@@ -30,7 +30,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.BaseColumns;
-import android.provider.CallLog;
 import android.provider.ContactsContract;
 import android.provider.ContactsContract.Contacts;
 import android.provider.ContactsContract.QuickContact;
@@ -345,7 +344,7 @@ public class Main extends Activity implements OnClickListener {
         mTitleGroup4 = settings.getString("mTitleGroup4", getResources()
                 .getString(R.string.app_name));
         mActionbarVc = settings.getBoolean("mActionbarVc", false);
-        mActionbarLog = settings.getBoolean("mActionbarLog", false);
+        mActionbarLog = false; // settings.getBoolean("mActionbarLog", false);
         mActionbarCon = settings.getBoolean("mActionbarCon", false);
         mActionbarDial = settings.getBoolean("mActionbarDial", false);
         mActionbarAc = settings.getBoolean("mActionbarAc", false);
@@ -381,7 +380,7 @@ public class Main extends Activity implements OnClickListener {
 
         MenuInflater inflater = getMenuInflater();
 
-        if (mIsICSorHigher) {
+        if (mIsICSorHigher) { // menu items in action bar
             inflater.inflate(R.menu.main_menu_actionbar, menu);
 
             int showFlag = MenuItemCompat.SHOW_AS_ACTION_ALWAYS;
@@ -390,9 +389,6 @@ public class Main extends Activity implements OnClickListener {
                 MenuItemCompat.setShowAsAction(
                         (MenuItem) menu.findItem(R.id.menu_viewcontact),
                         showFlag);
-            if (mActionbarLog)
-                MenuItemCompat.setShowAsAction(
-                        (MenuItem) menu.findItem(R.id.menu_calllog), showFlag);
             if (mActionbarCon)
                 MenuItemCompat.setShowAsAction(
                         (MenuItem) menu.findItem(R.id.menu_contacts), showFlag);
@@ -415,7 +411,7 @@ public class Main extends Activity implements OnClickListener {
             // setActionbarItemVisibility(methodSetShowAsAction, menu);
 
         } else
-            inflater.inflate(R.menu.main_menu, menu);
+            inflater.inflate(R.menu.main_menu, menu); // dropdown menu
 
         return true;
     }
@@ -434,9 +430,6 @@ public class Main extends Activity implements OnClickListener {
                 return true;
             case R.id.menu_scan:
                 rescanMedia();
-                return true;
-            case R.id.menu_calllog:
-                showCallLog();
                 return true;
             case R.id.menu_actions:
                 startActions();
@@ -469,19 +462,6 @@ public class Main extends Activity implements OnClickListener {
         Toast.makeText(this, R.string.toast_editShortcut, Toast.LENGTH_SHORT)
                 .show();
 
-    }
-
-    /**
-     * open the Call Log
-     */
-    private void showCallLog() {
-        Intent showCallLog = new Intent();
-        showCallLog.setAction(Intent.ACTION_VIEW);
-        showCallLog.setType(CallLog.Calls.CONTENT_TYPE);
-        startActivity(showCallLog);
-
-        if (mAutoClose)
-            this.finish();
     }
 
     private void showKeypad() {
@@ -1210,57 +1190,6 @@ public class Main extends Activity implements OnClickListener {
     }
 
 
-    // private void showInfoAlertDialog() {
-    //
-    // String versionName = null;
-    //
-    // try {
-    // versionName = getPackageManager().getPackageInfo(getPackageName(),
-    // 0).versionName;
-    // } catch (Exception e) {
-    // e.printStackTrace();
-    // }
-    //
-    // mInfoAlertDialog = new AlertDialog.Builder(this).create();
-    // mInfoAlertDialog.setTitle("Info");
-    //
-    // String message = getResources().getString(R.string.app_name) + "\n\n"
-    // + "Version: " + versionName + "\n\n"
-    // + getResources().getString(R.string.dev_name) + ".";
-    //
-    // message += "\n\n"
-    // + getResources().getString(R.string.alertdialog_info_help);
-    //
-    // if (DEBUG_STARTUP) {
-    // float scaleDensity = getResources().getDisplayMetrics().density;
-    //
-    // String resolution = String.valueOf(getResources()
-    // .getDisplayMetrics().widthPixels)
-    // + "x"
-    // + String.valueOf(getResources().getDisplayMetrics().heightPixels);
-    //
-    // String density = String.valueOf(Math.round(getResources()
-    // .getDisplayMetrics().xdpi))
-    // + "x"
-    // + String.valueOf(Math.round(getResources()
-    // .getDisplayMetrics().ydpi));
-    //
-    // message += "\n\nResolution: " + resolution + "\n" + "Density: "
-    // + density + "\n" + "Density Scale: " + scaleDensity + "\n"
-    // + "Orientation: " + mOrientation;
-    // }
-    //
-    // mInfoAlertDialog.setMessage(message);
-    //
-    // mInfoAlertDialog.setButton("OK", new DialogInterface.OnClickListener() {
-    // @Override
-    // public void onClick(DialogInterface dialog, int which) {
-    // mInfoAlertDialog.dismiss();
-    // }
-    // });
-    // mInfoAlertDialog.show();
-    // }
-
     /**
      * shows a List Alert dialog with all available numbers of one contact.
      * 'mNumberItems' is a global field created in onActivityResult(int, int,
@@ -1652,6 +1581,7 @@ public class Main extends Activity implements OnClickListener {
         }
 
         mViewFlipper = (ViewFlipper) findViewById(R.id.viewFlipper1);
+        mViewFlipper.setBackgroundColor(Color.BLACK);
         mButtonBack = (ImageView) findViewById(R.id.imageViewBack);
         mButtonForward = (ImageView) findViewById(R.id.imageViewForward);
         mButtonHome = (ImageView) findViewById(R.id.imageViewHome);
